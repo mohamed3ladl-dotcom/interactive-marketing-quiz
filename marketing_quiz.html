@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ميد تيرم خريف 2025 - ادارة التسويق ✨</title>
+    <style>
+        /* التنسيق الجمالي والألوان المريحة */
+        :root {
+            --main-color: #1a73e8; /* أزرق جذاب */
+            --correct-color: #34a853; /* أخضر للنجاح */
+            --incorrect-color: #ea4335; /* أحمر للخطأ */
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f4f8; /* خلفية ناعمة */
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 30px 15px;
+            font-size: 18px; 
+        }
+        .container {
+            max-width: 950px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+        h1 {
+            color: var(--main-color);
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 3px solid var(--main-color);
+            padding-bottom: 15px;
+            font-size: 2.2em;
+        }
+        .question-box {
+            background-color: #e4edf7;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            border-right: 6px solid var(--main-color); /* شريط جانبي بلون رئيسي */
+            transition: all 0.3s ease;
+        }
+        .question-box h3 {
+            margin-top: 0;
+            color: #343a40;
+            font-size: 1.3em;
+            margin-bottom: 15px;
+        }
+        .options label {
+            display: flex;
+            align-items: center;
+            margin: 12px 0;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 6px;
+            transition: background-color 0.2s;
+            font-size: 1.1em;
+        }
+        .options label:hover:not(.disabled) {
+            background-color: #e9eff5; /* لون فاتح عند المرور بالفأرة */
+        }
+        .options input[type="radio"] {
+            margin-left: 15px;
+            transform: scale(1.3);
+        }
+        .options .disabled {
+            pointer-events: none; /* تعطيل النقر بعد التقييم */
+        }
+        
+        /* أزرار التحكم - التفاعلية */
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        .action-buttons button {
+            flex-grow: 1;
+            padding: 18px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.3em;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.1s;
+        }
+        #submit-button {
+            background-color: var(--correct-color);
+            color: white;
+        }
+        #submit-button:hover {
+            background-color: #2e8b46;
+            transform: translateY(-2px);
+        }
+        #reset-button {
+            background-color: var(--main-color);
+            color: white;
+            display: none; /* مخفي في البداية */
+        }
+        #reset-button:hover {
+            background-color: #145cb5;
+            transform: translateY(-2px);
+        }
+        
+        /* منطقة النتائج والمراجعة */
+        #results {
+            margin-top: 40px;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            font-size: 1.6em;
+            font-weight: bold;
+            display: none;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .correct-answer-text {
+            color: var(--correct-color);
+            font-weight: bold;
+            display: none;
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px dashed #c0c0c0;
+            font-size: 1em;
+            background-color: #e6f5e9;
+            padding: 8px;
+            border-radius: 6px;
+        }
+        
+        /* تنسيقات التقييم اللونية */
+        .incorrect-highlight {
+            border-right-color: var(--incorrect-color) !important;
+            background-color: #fce8e6 !important; /* خلفية السؤال الخاطئ */
+        }
+        .correct-highlight {
+            border-right-color: var(--correct-color) !important;
+            background-color: #e6f5e9 !important; /* خلفية السؤال الصحيح */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>ميد تيرم  خريف 2025 - ادارة التسويق ✨</h1>
+    <form id="quiz-form">
+        
+        <div class="question-box" data-correct="ب">
+            <h3>1. هي المنفعة التي تتحقق من الحصول على المنتج في الوقت المناسب للعميل:</h3>
+            <div class="options">
+                <label><input type="radio" name="q1" value="أ"> المنفعة المكانية</label>
+                <label><input type="radio" name="q1" value="ب"> المنفعة الزمانية</label>
+                <label><input type="radio" name="q1" value="ج"> المنفعة الحيازية</label>
+                <label><input type="radio" name="q1" value="د"> المنفعة الإدراكية</label>
+            </div>
+            <div class="correct-answer-text">الإجابة الصحيحة: المنفعة الزمانية</div>
+        </div>
+
+        <div class="question-box" data-correct="ج">
+            <h3>2. الوظيفة الأساسية للتسويق: ليس إيجاد العميل المناسب للمنتجات، ولكن إيجاد المنتجات المناسبة للعميل، يعكس مفهوم:</h3>
+            <div class="options">
+                <label><input type="radio" name="q2" value="أ"> التوجه بالإنتاج</label>
+                <label><input type="radio" name="q2" value="ب"> التوجه بالبيع</label>
+                <label><input type="radio" name="q2" value="ج"> التوجه بالتسويق</label>
+                <label><input type="radio" name="q2" value="د"> التوجه بالسوق</label>
+            </div>
+            <div class="correct-answer-text">الإجابة الصحيحة: التوجه بالتسويق</div>
+        </div>
+        
+        <div class="question-box" data-correct="أ">
+            <h3>3. هي المرحلة التي ركزت على انتاج أكبر كمية من السلع:</h3>
+            <div class="options">
+                <label><input type="radio" name="q3" value="أ"> التوجه بالإنتاج</label>
+                <label><input type="radio" name="q3" value="ب"> التوجه بالبيع</label>
+                <label><input type="radio" name="q3" value="ج"> التوجه بالتسويق</label>
+                <label><input type="radio" name="q3" value="د"> التوجه بالسوق</label>
+            </div>
+            <div class="correct-answer-text">الإجابة الصحيحة: التوجه بالإنتاج</div>
+        </div>
+
+        <div class="question-box" data-correct="ب">
+            <h3>4. تعتمد المنفعة.... على وظيفة التخزين:</h3>
+            <div class="options">
+                <label><input type="radio" name="q4" value="أ"> منفعة المهمة</label>
+                <label><input type="radio" name="q4" value="ب"> منفعة زمنية</label>
+                <label><input type="radio" name="q4" value="ج"> منفعة مكانية</label>
+                <label><input type="radio" name="q4" value="د"> المنفعة الإدراكية</label>
+            </div>
+            <div class="correct-answer-text">الإجابة الصحيحة: منفعة زمنية</div>
+        </div>
+
+        <div class="question-box" data-correct="ب">
+            <h3>5. اذا كان المنتج في مرحلة التقديم فإنه يفضل استعمال استراتيجية:</h3>
+            <div class="options">
+                <label><input type="radio" name="q5" value="أ"> السوق الكلي</label>
+                <label><input type="radio" name="q5" value="ب"> التركيز</label>
+                <label><input type="radio" name="q5" value="ج"> التقسيم المتعدد</label>
+                <label><input type="radio" name="q5" value="د"> لا شيء مما سبق</label>
+            </div>
+            <div class="correct-answer-text">الإجابة الصحيحة: التركيز</div>
+        </div>
+
+        <div class="question-box" data-correct="ب">
+            <h3>6. أفضل استراتيجية لدخول السوق هي:</h3>
+            <div class="options">
+                <label><input type="radio" name="q6" value="أ"> السوق الكلي</label>
+                <label><input type="radio" name="q6" value="ب"> التركيز</label>
+                <label><input type="radio" name="q6" value="ج"> التقسيم المتعدد</label>
+                <label><input type="radio" name="q6" value="د"> لا شيء مما سبق</label>
+            </div>
+            <div class="correct-answer-text">الإجابة الصحيحة: التركيز</div>
+        </div>
+
+        <div class="question-box" data-correct="ج">
+            <h3>7. شركات السجائر لا تعتبر الأطفال والمراهقين ضمن سوقها لأنه لا تتوافر لديهم:</h3>
+            <div class="options">
+                <label><input type="radio" name="q7" value="أ"> الرغبة</label>
+                <label><input type="radio" name="q7" value="ب"> القدرة</label>
+                <label><input type="radio" name="q7" value="ج"> السلطة</label>
+                <label><input type="radio" name="q7" value="د"> كل ما سبق</label>
+            </div>
+            <div class="correct-answer-text">الإجابة الصحيحة: السلطة</div>
+        </div>
+
+        <div class="question-box" data-correct="ب">
+            <h3>8. عندما تكون الكمية المعروضة من المنتج أكبر مما هو مطلوب منه يطلق عليه:</h3>
+            <div class="options">
+                <label><input type="radio" name="q8" value="أ"> سوق بائعين</label>
+                <label><input type="radio" name="q8" value="ب"> سوق مشترين</label>
+                <label><input type="radio" name="q8" value="ج"> سوق حر</label>
+                <label><input type="radio" name="q8" value="د"> سوق رأس مالي</label>
+            </div>
+            <div class="correct-answer-text">الإجابة الصحيحة: سوق مشترين</div>
+        </div>
+
+        <div class="question-box" data-correct="ج">
+            <h3>9. ينظر رجال التسويق إلى السوق على أنه:</h3>
+            <div class="options">
+                <label><input type="radio" name="q9" value="أ"> المكان الذي يلتقي فيه البائع والمشتري</label>
+                <label><input type="radio" name="q9" value="ب"> قوى العرض والطلب التي تحدد طبيعة السوق</label>
+                <label><input type="radio" name="q9" value="ج"> مجموعة من المشترين الحاليين والمرتقبين لديهم الرغبة والقدرة والسلطة للشراء</label>
+                <label><input type="radio" name="q9" value="د"> لا شئ مما سبق</label>
+            </div>
+            <div class="correct-answer-text">الإجابة الصحيحة: مجموعة من المشترين الحاليين والمرتقبين لديهم الرغبة والقدرة والسلطة للشراء</div>
+        </div>
+
+        <div class="question-box" data-correct="ب">
+            <h3>10. يمثل البحث عن المعلومات المرحلة.....في عملية اتخاذ القرار:</h3>
+            <div class="options">
+                <label><input type="radio" name="q10" value="أ"> الأولى</label>
+                <label><input type="radio" name="q10" value="ب"> الثانية</label>
+                <label><input type="radio" name="q10" value="ج"> الثالثة</label>
+                <label><input type="radio" name="q10" value="د"> الرابعة</label>
+            </div>
+            <div class="correct-answer-text">الإجابة الصحيحة: الثانية</div>
+        </div>
+
+        <div class="question-box" data-correct="ب">
+            <h3>11. الدافع الذي يحرك المستهلك على شراء سلعة معينة بعد دراسة دقيقة للأمور المتعلقة بها ووزن المنافع التي تحققها:</h3>
+            <div class="options">
+                <label><input type="radio" name="q11" value="أ"> الدوافع الأولية</label>
+                <label><input type="radio" name="q11" value="ب"> دوافع عقلية</label>
+                <label><input type="radio" name="q11" value="ج"> دوافع عاطفية</label>
+                <label><input type="radio" name="q11" value="د"> دوافع التعامل</label>
+            </div>
+            <div class="correct-answer-text">الإجابة الصحيحة: دوافع عقلية</div>
+        </div>
+
+        <div class="question-box" data-correct="ج">
+            <h3>12. يعتبر نظام الشراء الآن والدفع لاحقاً مثال على تحفيز الشراء:</h3>
+            <div class="options">
+                <label><input type="radio" name="q12" value="أ"> العقلاني</label>
+                <label><input type="radio" name="q12" value="ب"> المعقد</label>
+                <label><input type="radio" name="q12" value="ج"> المخطط</label>
+                <label><input type="radio" name="q12" value="د"> الاندفاعي</label>
+            </div>
+            <div class="correct-answer-text">الإجابة الصحيحة: المخطط</div>
+        </div>
+
+        <div class="question-box" data-correct="أ">
+            <h3>13. هذه الإستراتيجية تمثل انعكاس للعلاقة ما بين نقاط القوة الموجودة في المنظمة والفرص المتاحة في السوق:</h3>
+            <div class="options">
+                <label><input type="radio" name="q13" value="أ"> هجومية</label>
+                <label><input type="radio" name="q13" value="ب"> علاجية</label>
+                <label><input type="radio" name="q13" value="ج"> دفاعية</label>
+                <label><input type="radio" name="q13" value="د"> انكماشية</label>
+            </div>
+            <div class="correct-answer-text">الإجابة الصحيحة: هجومية</div>
+        </div>
+
+        <div class="question-box" data-correct="أ">
+            <h3>14. هو اكتشاف الحاجات غير المشبعة لدى المستهلكين، ثم تقديم المنتجات المناسبة لذلك:</h3>
+            <div class="options">
+                <label><input type="radio" name="q14" value="أ"> التسويق الاستجابي</label>
+                <label><input type="radio" name="q14" value="ب"> التسويق الاستباقي</label>
+                <label><input type="radio" name="q14" value="ج"> التسويق الذي يشكل الحاجات</label>
+                <label><input type="radio" name="q14" value="د"> التسويق التحليلي</label>
+            </div>
+            <div class="correct-answer-text">الإجابة الصحيحة: التسويق الاستجابي</div>
+        </div>
+
+        <div class="question-box" data-correct="أ">
+            <h3>15. معظم المنتجات التي نراها في السوبر ماركت (السكر، الشاي، الخبز) يناسبها استراتيجية:</h3>
+            <div class="options">
+                <label><input type="radio" name="q15" value="أ"> السوق الكلي</label>
+                <label><input type="radio" name="q15" value="ب"> التركيز</label>
+                <label><input type="radio" name="q15" value="ج"> التقسيم المتعدد</label>
+                <label><input type="radio" name="q15" value="د"> كل ما سبق</label>
+            </div>
+            <div class="correct-answer-text">الإجابة الصحيحة: السوق الكلي</div>
+        </div>
+
+        <div class="question-box" data-correct="أ">
+            <h3>16. أن النجاح في التوجه بالعميل الخارجي يتطلب أولاً النجاح في التوجه بالعميل الداخلي.</h3>
+            <div class="options">
+                <label><input type="radio" name="q16" value="أ"> الإجابة صحيحة</label>
+                <label><input type="radio" name="q16" value="ب"> الإجابة خاطئة</label>
+            </div>
+            <div class="correct-answer-text">الإجابة الصحيحة: صحيحة</div>
+        </div>
+
+        <div class="question-box" data-correct="ب">
+            <h3>17. المستشفيات تملك سيارات إسعاف لنقل الحالات المرضية الطارئة هو مثال للمنفعة الزمنية.</h3>
+            <div class="options">
+                <label><input type="radio" name="q17" value="أ"> الإجابة صحيحة</label>
+                <label><input type="radio" name="q17" value="ب"> الإجابة خاطئة</label>
+            </div>
+            <div class="correct-answer-text">الإجابة الصحيحة: خاطئة (الصحيح: منفعة مكانية)</div>
+        </div>
+
+        <div class="question-box" data-correct="أ">
+            <h3>18. إن معظم المنظمات الآن في مرحلة التوجه بالتسويق.</h3>
+            <div class="options">
+                <label><input type="radio" name="q18" value="أ"> الإجابة صحيحة</label>
+                <label><input type="radio" name="q18" value="ب"> الإجابة خاطئة</label>
+            </div>
+            <div class="correct-answer-text">الإجابة الصحيحة: صحيحة</div>
+        </div>
+
+        <div class="question-box" data-correct="أ">
+            <h3>19. تضم البيئة الخارجية عوامل لا تخضع لسيطرة الإدارة، وعلى الإدارة متابعة هذه العوامل والسعي للتكيف معها.</h3>
+            <div class="options">
+                <label><input type="radio" name="q19" value="أ"> الإجابة صحيحة</label>
+                <label><input type="radio" name="q19" value="ب"> الإجابة خاطئة</label>
+            </div>
+            <div class="correct-answer-text">الإجابة الصحيحة: صحيحة</div>
+        </div>
+
+        <div class="question-box" data-correct="ب">
+            <h3>20. يستقبل الفرد كل المعلومات التي يتعرض لها، ويستوعبها كلها.</h3>
+            <div class="options">
+                <label><input type="radio" name="q20" value="أ"> الإجابة صحيحة</label>
+                <label><input type="radio" name="q20" value="ب"> الإجابة خاطئة</label>
+            </div>
+            <div class="correct-answer-text">الإجابة الصحيحة: خاطئة (بسبب الانتقائية)</div>
+        </div>
+
+        <div class="question-box" data-correct="ب">
+            <h3>21. إذا كان المتنافسون متميزين في التعامل بالتقسيم، فإن المنظمة يجب أن تتبع استراتيجية السوق الكلي لتحقيق التميز.</h3>
+            <div class="options">
+                <label><input type="radio" name="q21" value="أ"> الإجابة صحيحة</label>
+                <label><input type="radio" name="q21" value="ب"> الإجابة خاطئة</label>
+            </div>
+            <div class="correct-answer-text">الإجابة الصحيحة: خاطئة</div>
+        </div>
+
+        <div class="question-box" data-correct="أ">
+            <h3>22. سوق منتج معين ما هو إلا مجموع المستهلكين النهائيين والمشترين الصناعيين والهيئات التي تشتري هذا المنتج.</h3>
+            <div class="options">
+                <label><input type="radio" name="q22" value="أ"> الإجابة صحيحة</label>
+                <label><input type="radio" name="q22" value="ب"> الإجابة خاطئة</label>
+            </div>
+            <div class="correct-answer-text">الإجابة الصحيحة: صحيحة</div>
+        </div>
+
+        <div class="question-box" data-correct="أ">
+            <h3>23. ممكن أن يكون المنتج شخص.</h3>
+            <div class="options">
+                <label><input type="radio" name="q23" value="أ"> الإجابة صحيحة</label>
+                <label><input type="radio" name="q23" value="ب"> الإجابة خاطئة</label>
+            </div>
+            <div class="correct-answer-text">الإجابة الصحيحة: صحيحة</div>
+        </div>
+
+        <div class="question-box" data-correct="ب">
+            <h3>24. يكفي وجود السكان وتوافر الرغبة في شراء المنتجات المختلفة لتكسب عميلاً.</h3>
+            <div class="options">
+                <label><input type="radio" name="q24" value="أ"> الإجابة صحيحة</label>
+                <label><input type="radio" name="q24" value="ب"> الإجابة خاطئة</label>
+            </div>
+            <div class="correct-answer-text">الإجابة الصحيحة: خاطئة (لا يكفي، نحتاج القدرة والسلطة)</div>
+        </div>
+
+        <div class="question-box" data-correct="ب">
+            <h3>25. تشمل البيئة الديموجرافية: تحليل الدخل والإنفاق، التقلبات الاقتصادية، التضخم، والحالة الاقتصادية.</h3>
+            <div class="options">
+                <label><input type="radio" name="q25" value="أ"> الإجابة صحيحة</label>
+                <label><input type="radio" name="q25" value="ب"> الإجابة خاطئة</label>
+            </div>
+            <div class="correct-answer-text">الإجابة الصحيحة: خاطئة (هذه متغيرات اقتصادية)</div>
+        </div>
+
+        <div class="action-buttons">
+            <button type="button" id="submit-button" onclick="calculateScore()">✅ احتساب النتيجة ومراجعة الإجابات</button>
+            <button type="button" id="reset-button" onclick="resetQuiz()">🔄 إعادة الاختبار</button>
+        </div>
+    </form>
+
+    <div id="results"></div>
+</div>
+
+<script>
+    /* التفاعلية وحساب النتيجة (JavaScript) */
+    const totalQuestions = 25; 
+
+    function calculateScore() {
+        const questions = document.querySelectorAll('.question-box');
+        let score = 0;
+        const resultsDiv = document.getElementById('results');
+        const submitBtn = document.getElementById('submit-button');
+        const resetBtn = document.getElementById('reset-button');
+        
+        questions.forEach((q, index) => {
+            const correctValue = q.getAttribute('data-correct');
+            const questionName = 'q' + (index + 1);
+            const selectedOption = document.querySelector(`input[name="${questionName}"]:checked`);
+            const correctAnswerDiv = q.querySelector('.correct-answer-text');
+            
+            // 1. تعطيل الاختيار وإظهار المراجعة
+            const allRadios = q.querySelectorAll('input[type="radio"]');
+            allRadios.forEach(radio => radio.closest('label').classList.add('disabled'));
+            
+            q.classList.remove('incorrect-highlight', 'correct-highlight');
+            correctAnswerDiv.style.display = 'block';
+
+            if (selectedOption) {
+                const selectedLabel = selectedOption.closest('label');
+                
+                // 2. تلوين الإطارات والخلفيات
+                if (selectedOption.value === correctValue) {
+                    score++;
+                    q.classList.add('correct-highlight');
+                    selectedLabel.style.backgroundColor = '#d4edda';
+                } else {
+                    q.classList.add('incorrect-highlight');
+                    selectedLabel.style.backgroundColor = '#f8d7da'; // تمييز الإجابة الخاطئة
+                    // تلوين الصحيح للمراجعة
+                    const correctLabel = q.querySelector(`input[value="${correctValue}"]`).closest('label');
+                    correctLabel.style.backgroundColor = '#d4edda';
+                }
+            } else {
+                // تلوين الصحيح حتى لو لم يجب
+                const correctLabel = q.querySelector(`input[value="${correctValue}"]`).closest('label');
+                correctLabel.style.backgroundColor = '#d4edda';
+            }
+        });
+
+        // 3. عرض النتيجة النهائية مع الألوان المناسبة
+        const percentage = (score / totalQuestions) * 100;
+        let emoji, message, bgColor, color;
+
+        if (score === totalQuestions) {
+            emoji = '👑'; message = `مذهل! إجاباتك كلها صحيحة!`;
+            bgColor = '#d4edda'; color = '#155724';
+        } else if (percentage >= 80) {
+            emoji = '🌟'; message = `رائع! نتيجة ممتازة!`;
+            bgColor = '#ccf5ff'; color = '#004085';
+        } else if (percentage >= 50) {
+            emoji = '👍'; message = `جيد! تحتاج لمراجعة بسيطة.`;
+            bgColor = '#fff3cd'; color = '#856404';
+        } else {
+            emoji = '💡'; message = `تحتاج لمراجعة بعض المفاهيم.`;
+            bgColor = '#f8d7da'; color = '#721c24';
+        }
+
+        resultsDiv.style.backgroundColor = bgColor;
+        resultsDiv.style.color = color;
+        resultsDiv.innerHTML = `${emoji} **النتيجة:** ${score} من أصل ${totalQuestions} سؤال. ${message}`;
+        resultsDiv.style.display = 'block';
+
+        // 4. إظهار زر إعادة الاختبار (Reset Button)
+        submitBtn.style.display = 'none';
+        resetBtn.style.display = 'block';
+    }
+
+    function resetQuiz() {
+        // إعادة تعيين النموذج بالكامل
+        document.getElementById('quiz-form').reset();
+        document.getElementById('results').style.display = 'none';
+        document.getElementById('submit-button').style.display = 'block';
+        document.getElementById('reset-button').style.display = 'none';
+
+        const questions = document.querySelectorAll('.question-box');
+        
+        // إزالة التنسيقات والمراجعة من كل سؤال
+        questions.forEach(q => {
+            q.classList.remove('incorrect-highlight', 'correct-highlight');
+            q.style.borderRightColor = '#1a73e8'; 
+
+            q.querySelector('.correct-answer-text').style.display = 'none';
+            
+            // إعادة تفعيل حقول الراديو ومسح التظليل
+            const allRadios = q.querySelectorAll('input[type="radio"]');
+            allRadios.forEach(radio => {
+                radio.closest('label').classList.remove('disabled');
+                radio.closest('label').style.backgroundColor = 'transparent';
+            });
+        });
+    }
+</script>
+
+</body>
+</html>
